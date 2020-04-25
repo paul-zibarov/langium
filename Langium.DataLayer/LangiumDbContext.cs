@@ -21,78 +21,40 @@ namespace Langium.DataLayer
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //unique_constraint
-            modelBuilder
-                .Entity<UserModel>()
-                .HasIndex(u => u.Login)
-                .IsUnique();
+            modelBuilder.Entity<UserModel>(UserConfigure);
+            modelBuilder.Entity<UserProfileModel>(UserProfileConfigure);
+            modelBuilder.Entity<StatsModel>(StatsConfigure);
+        }
 
-            modelBuilder
-                .Entity<UserProfileModel>()
-                .HasIndex(u => u.Email)
-                .IsUnique();
+        private void UserConfigure(EntityTypeBuilder<UserModel> builder)
+        {
+            builder.HasIndex(u => u.Login).IsUnique(); //login unique constraint
 
-            //FK_constraint
-            modelBuilder
-                .Entity<UserModel>()
-                .HasOne(u => u.Profile)
-                .WithOne(p => p.User)
-                .HasForeignKey<UserProfileModel>(p => p.UserId);
+            builder.HasOne(u => u.Profile).WithOne(p => p.User).HasForeignKey<UserProfileModel>(p => p.UserId); //fk UserProfile
+            builder.HasOne(u => u.Stats).WithOne(s => s.User).HasForeignKey<StatsModel>(p => p.UserId); //fk Stats
+            builder.HasMany(u => u.Categories).WithOne(s => s.User).HasForeignKey(c => c.UserId); //fk Categories
 
-            modelBuilder
-                .Entity<UserModel>()
-                .HasOne(u => u.Stats)
-                .WithOne(s => s.User)
-                .HasForeignKey<StatsModel>(s => s.UserId);
+            builder.Property(u => u.Login).IsRequired(); //login required constraint
+            builder.Property(u => u.Password).IsRequired(); //password required constraint
 
-            //require_constraint
-            modelBuilder
-                .Entity<UserModel>()
-                .Property(u => u.Login)
-                .IsRequired();
+            builder.Property(u => u.Login).HasMaxLength(30); //login size constraint
+            builder.Property(u => u.Password).HasMaxLength(30); //password size constraint
+        }
 
-            modelBuilder
-                .Entity<UserModel>()
-                .Property(u => u.Password)
-                .IsRequired();
+        private void UserProfileConfigure(EntityTypeBuilder<UserProfileModel> builder)
+        {
+            builder.HasIndex(u => u.Email).IsUnique(); //email unique constraint
 
-            //size_constraint
-            modelBuilder
-                .Entity<UserProfileModel>()
-                .Property(p => p.Name)
-                .HasMaxLength(30);
+            builder.Property(p => p.Name).HasMaxLength(30); //name size constraint
+            builder.Property(p => p.Email).HasMaxLength(50); //email size constraint
 
-            modelBuilder
-                .Entity<UserProfileModel>()
-                .Property(p => p.Email)
-                .HasMaxLength(50);
+            builder.Property(p => p.RegistrationDate).HasDefaultValueSql("now()").ValueGeneratedOnAdd(); //default value registraation date
+        }
 
-            modelBuilder
-                .Entity<UserModel>()
-                .Property(u => u.Login)
-                .HasMaxLength(30);
-
-            modelBuilder
-                .Entity<UserModel>()
-                .Property(u => u.Password)
-                .HasMaxLength(30);
-
-            //default_values
-            modelBuilder
-                .Entity<StatsModel>()
-                .Property(s => s.TotalAnswers)
-                .HasDefaultValue(0);
-
-            modelBuilder
-                .Entity<StatsModel>()
-                .Property(s => s.RightAnswers)
-                .HasDefaultValue(0);
-
-            modelBuilder
-                .Entity<UserProfileModel>()
-                .Property(p => p.RegistrationDate)
-                .HasDefaultValueSql("now()")
-                .ValueGeneratedOnAdd();
+        private void StatsConfigure(EntityTypeBuilder<StatsModel> builder)
+        {
+            builder.Property(s => s.TotalAnswers).HasDefaultValue(0); //total answers default value
+            builder.Property(s => s.RightAnswers).HasDefaultValue(0);//right answers default value
         }
 
         public DbSet<UserModel> Users { get; set; }
