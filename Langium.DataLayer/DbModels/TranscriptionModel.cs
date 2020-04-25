@@ -8,6 +8,6 @@ namespace Langium.DataLayer.DbModels
     {
         public int Id { get; set; }
 
-        public string Translation { get; set; }
+        public string Transcription { get; set; }
     }
 }
