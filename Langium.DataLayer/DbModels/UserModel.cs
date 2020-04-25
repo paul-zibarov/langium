@@ -15,5 +15,7 @@ namespace Langium.DataLayer.DbModels
         public UserProfileModel Profile { get; set; }
 
         public StatsModel Stats { get; set; }
+
+        public List<CategoryModel> Categories { get; set; }
     }
 }
