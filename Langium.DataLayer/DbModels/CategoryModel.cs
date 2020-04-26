@@ -12,8 +12,8 @@ namespace Langium.DataLayer.DbModels
 
         public List<WordModel> Words { get; set; }
 
-        public int UserId { get; set; }
+        public int ProfileId { get; set; }
 
-        public UserModel User { get; set; }
+        public ProfileModel Profile { get; set; }
     }
 }

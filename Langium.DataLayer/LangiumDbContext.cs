@@ -11,6 +11,7 @@ namespace Langium.DataLayer
     {
         public LangiumDbContext()
         {
+            Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 
@@ -22,44 +23,45 @@ namespace Langium.DataLayer
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<UserModel>(UserConfigure);
-            modelBuilder.Entity<UserProfileModel>(UserProfileConfigure);
+            modelBuilder.Entity<ProfileModel>(ProfileConfigure);
             modelBuilder.Entity<StatsModel>(StatsConfigure);
         }
 
         private void UserConfigure(EntityTypeBuilder<UserModel> builder)
         {
-            builder.HasIndex(u => u.Login).IsUnique(); //login unique constraint
-
-            builder.HasOne(u => u.Profile).WithOne(p => p.User).HasForeignKey<UserProfileModel>(p => p.UserId); //fk UserProfile
-            builder.HasOne(u => u.Stats).WithOne(s => s.User).HasForeignKey<StatsModel>(p => p.UserId); //fk Stats
-            builder.HasMany(u => u.Categories).WithOne(s => s.User).HasForeignKey(c => c.UserId); //fk Categories
-
-            builder.Property(u => u.Login).IsRequired(); //login required constraint
-            builder.Property(u => u.Password).IsRequired(); //password required constraint
-
-            builder.Property(u => u.Login).HasMaxLength(30); //login size constraint
-            builder.Property(u => u.Password).HasMaxLength(30); //password size constraint
-        }
-
-        private void UserProfileConfigure(EntityTypeBuilder<UserProfileModel> builder)
-        {
             builder.HasIndex(u => u.Email).IsUnique(); //email unique constraint
 
-            builder.Property(p => p.Name).HasMaxLength(30); //name size constraint
-            builder.Property(p => p.Email).HasMaxLength(50); //email size constraint
+            builder.HasOne(u => u.Profile).WithOne(p => p.User).HasForeignKey<ProfileModel>(p => p.UserId); //fk UserProfile
 
-            builder.Property(p => p.RegistrationDate).HasDefaultValueSql("now()").ValueGeneratedOnAdd(); //default value registraation date
+            builder.Property(u => u.Email).IsRequired(); //login required constraint
+            builder.Property(u => u.Password).IsRequired(); //password required constraint
+
+            builder.Property(u => u.Email).HasMaxLength(30); //login size constraint
+            builder.Property(u => u.Password).HasMaxLength(30); //password size constraint
+
+            builder.Property(u => u.IsActivated).HasDefaultValue(false); //default value is activated
+            builder.Property(u => u.RegistrationDate).HasDefaultValueSql("now()").ValueGeneratedOnAdd(); //default value registration date
+        }
+
+        private void ProfileConfigure(EntityTypeBuilder<ProfileModel> builder)
+        {
+            builder.Property(p => p.Name).HasMaxLength(30); //name size constraint
+
+            builder.HasOne(p => p.Stats).WithOne(s => s.Profile).HasForeignKey<StatsModel>(p => p.UserId); //fk Stats
+            builder.HasMany(p => p.Categories).WithOne(s => s.Profile).HasForeignKey(c => c.ProfileId); //fk Categories
+
+            builder.Property(p => p.Age).HasDefaultValue(18); //default value age
         }
 
         private void StatsConfigure(EntityTypeBuilder<StatsModel> builder)
         {
             builder.Property(s => s.TotalAnswers).HasDefaultValue(0); //total answers default value
-            builder.Property(s => s.RightAnswers).HasDefaultValue(0);//right answers default value
+            builder.Property(s => s.RightAnswers).HasDefaultValue(0); //right answers default value
         }
 
         public DbSet<UserModel> Users { get; set; }
 
-        public DbSet<UserProfileModel> UserProfiles { get; set; }
+        public DbSet<ProfileModel> UserProfiles { get; set; }
 
         public DbSet<StatsModel> Stats { get; set; }
     }

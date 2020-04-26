@@ -14,6 +14,6 @@ namespace Langium.DataLayer.DbModels
 
         public int UserId { get; set; }
 
-        public UserModel User { get; set; }
+        public ProfileModel Profile { get; set; }
     }
 }

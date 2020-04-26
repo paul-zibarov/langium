@@ -8,14 +8,16 @@ namespace Langium.DataLayer.DbModels
     {
         public int Id { get; set; }
 
-        public string Login { get; set; }
+        public string Email { get; set; }
 
         public string Password { get; set; }
 
-        public UserProfileModel Profile { get; set; }
+        public int ActivationCode { get; set; }
 
-        public StatsModel Stats { get; set; }
+        public bool IsActivated { get; set; }
 
-        public List<CategoryModel> Categories { get; set; }
+        public DateTime RegistrationDate { get; set; }
+
+        public ProfileModel Profile { get; set; }
     }
 }
