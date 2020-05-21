@@ -8,6 +8,10 @@ namespace Langium.DataLayer.DbModels
     {
         public int Id { get; set; }
 
-        public int Lexeme { get; set; }
+        public string Lexeme { get; set; }
+
+        public int WordId { get; set; }
+
+        public WordModel Word { get; set; }
     }
 }

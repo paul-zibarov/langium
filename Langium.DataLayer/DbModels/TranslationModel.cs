@@ -9,5 +9,9 @@ namespace Langium.DataLayer.DbModels
         public int Id { get; set; }
 
         public string Translation { get; set; }
+
+        public int WordId { get; set; }
+
+        public WordModel Word { get; set; }
     }
 }

@@ -12,7 +12,7 @@ namespace Langium.DataLayer.DbModels
 
         public int RightAnswers { get; set; }
 
-        public int UserId { get; set; }
+        public int ProfileId { get; set; }
 
         public ProfileModel Profile { get; set; }
     }
