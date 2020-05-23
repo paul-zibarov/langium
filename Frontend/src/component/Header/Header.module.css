@@ -1,0 +1,9 @@
+
+.header {
+    height: 65px;
+    background-color: #ffff;
+    grid-area: h;
+    position: center;
+    border-bottom: 2px solid #5A79B4;
+    border-radius: 0px 0px 20px 20px;
+}

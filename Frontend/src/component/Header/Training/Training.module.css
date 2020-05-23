@@ -1,0 +1,131 @@
+  .button{
+      outline: none;
+      padding-top: 20px;
+      border: 1px solid #fff;  
+      background-image: url(./training.png);
+      background-position: center ;
+      background-repeat: no-repeat;
+      background-color: #fff;
+      margin-top: -10px;
+      
+      position: fixed;
+      left: 50%;
+      color: #47A4F1;
+      width: 100px;
+      height: 60px;
+      padding-top: 23px;
+    
+    }
+
+  .modal{
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  left: 32%;
+  top: 148px;
+  background-color: #FFFFFF;
+  border: 1px solid #bdbfc2;
+  border-radius: 15px;
+        
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+
+  .modalHeader{
+  position: fixed;
+  width: 246px;
+  height: 47.19px;
+  left: 610px;
+  top: 162.16px;
+  
+  background: #5A79B4;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+
+  }
+  .headerText{
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+  font-family: Calibri;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 106.84%;
+  margin-top: 10px;
+  }
+    
+    .button1{
+      position: fixed;
+      width: 300px;
+      height: 45px;
+      left: 590px;
+      top: 360px;
+      background: #FFFFFF;
+          
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      outline: none;
+    }
+    
+    .button2{
+      position: fixed;
+      width: 300px;
+      height: 45px;
+      left: 590px;
+      top: 430px;
+      background: #FFFFFF;
+          
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      outline: none;
+    }
+    .button3{
+      position: fixed;
+      width: 300px;
+      height: 45px;
+      left: 590px;
+      top: 500px;
+      background: #FFFFFF;
+          
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      outline: none;
+    }
+    .button4{
+      position: fixed;
+      width: 300px;
+      height: 45px;
+      left: 590px;
+      top: 570px;
+      background: #FFFFFF;
+          
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      outline: none;
+    }
+  
+    .hr{
+      border: 1px solid  #47A4F1;
+      background-color: #47A4F1;
+      width: 50px;
+      margin-left: 20px;
+      border-radius: 10px;
+      margin-top: -15px;
+    }
+
+    .button:focus
+  .hr{
+    visibility: visible;
+  }
+  .button:active,
+  .hr{
+    visibility:visible;
+  }
+
+  .button:disabled,
+  .hr{
+    visibility: hidden;
+  }
+  
+  

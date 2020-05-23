@@ -1,0 +1,20 @@
+.app-wrapper{
+  min-height: 100vh;
+  background-color:#ebf8ff;
+  background-image: url(./Background.png);
+  background-repeat: no-repeat;
+  background-position: center ;
+
+  margin: 0 ;
+  width: 100%;
+
+  display: grid;
+  grid-template-areas: 
+  "h h h"
+  "r ws th";
+  
+  grid-template-rows: 80px auto;
+  grid-template-columns: 1fr 3.5fr 1.5fr;
+  
+
+}

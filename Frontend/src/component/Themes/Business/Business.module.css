@@ -1,0 +1,22 @@
+.business{
+    height: 125px;
+    background-color: #90B4F8;;
+    border-radius: 20px;
+    margin: 20px;
+    margin-top: 30px;
+    color: white;
+   padding-top: 20px; 
+}
+.business h2{
+    text-align: center;
+    position: relative;
+    bottom: 95px;
+    margin-left: 50px;
+}
+.business img{
+    width: 100px;
+    background-color: white;
+    border-radius: 15px;
+    margin-left: 30px;
+    margin-top: 5px;
+}
