@@ -2,25 +2,28 @@ import React from 'react';
 import './App.css';
 import Header from './component/Header/Header';
 import Rating from './component/Rating/Rating';
-import Themes from './component/Themes/Themes';
-import { BrowserRouter, Route } from 'react-router-dom';
-import NewWords from './component/Header/NewWords/NewWords';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NavBar from './component/NavBar/NavBar';
-import Training from './component/Header/Training/Training';
-import Progress from './component/Header/Progress/Progress';
-import HiUser from './component/Header/HiUser/HiUser';
-import Settings from './component/Header/Settings/Settings';
-import Vocabulary from './component/Header/Vocabulary/Vocabulary';
+import LoginPage from './component/LoginPage/LoginPage';
 
 debugger;
 const App=(props)=> {
   return (
     <BrowserRouter>
+    <Switch>
     <div className="app-wrapper">
-      <Header store={props.store}/>
-      <Rating store={props.store}/>
-      <NavBar store={props.store}/>
+        <Route  path='/langium/new-words' render={()=><Header store={props.store}/>}/>
+        <Route  path='/langium/vocabulary' render={()=><Header store={props.store}/>}/>
+        <Route  path='/langium/training' render={()=><Header store={props.store}/>}/>
+        <Route  path='/langium/progress' render={()=><Header store={props.store}/>}/>
+        <Route  path='/langium/hiuser' render={()=><Header store={props.store}/>}/>
+        <Route  path='/langium/setting' render={()=><Header store={props.store}/>}/>
+        <Route  path='/langium' render={()=><Header store={props.store}/>}/>
+        <Route  path='/langium' render={()=><Rating/>}/>
+        <Route  path='/langium' render={()=><NavBar/>}/>
+        <Route exact path='/login' component={LoginPage}/> 
     </div>
+    </Switch>
     </BrowserRouter>
   );
 }

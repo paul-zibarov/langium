@@ -13,14 +13,12 @@ const Header=(props)=>{
     return(
         <div className={classes.header}> 
            <Logo/>
-           <NavLink to ='/new-words'><NewWords/></NavLink>
-           <NavLink to ='/vocabulary'><Vocabulary/></NavLink>
-           <NavLink to ='/training'><Training/></NavLink>
-           <NavLink to ='/progress'><Progress/></NavLink>
-           <NavLink to ='/hiuser'><HiUser/></NavLink>
-           <NavLink to ='/settings'><Settings/></NavLink>
-           
-          
+           <NavLink to='/langium/new-words'><NewWords store={props.store}/></NavLink>
+            <NavLink to='/langium/vocabulary'><Vocabulary /></NavLink>
+            <NavLink to='/langium/training'><Training /></NavLink>
+            <NavLink to='/langium/progress'><Progress /></NavLink>
+            <NavLink to='/langium/hiuser'><HiUser /></NavLink>
+            <NavLink to='/langium/settings'><Settings /></NavLink>
                        
         </div>
     );
