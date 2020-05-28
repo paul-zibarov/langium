@@ -9,7 +9,7 @@ namespace Langium.DataLayer.DataAccessObjects
 {
     public class UserDao
     {
-        public async Task<UserModel> GetByIdAsync(int id)
+        public async Task<UserModel> GetUserByIdAsync(int id)
         {
             using (var context = new LangiumDbContext())
             {
@@ -62,7 +62,6 @@ namespace Langium.DataLayer.DataAccessObjects
                 try
                 {
                     context.Entry(user).State = EntityState.Modified;
-                    context.Entry(user).Property(u => u.Password).IsModified = true;
                     await context.SaveChangesAsync();
                     return user;
                 }
@@ -74,7 +73,7 @@ namespace Langium.DataLayer.DataAccessObjects
             }
         }
 
-        public async Task<bool> RemoveAsync(int id)
+        public async Task<bool> RemoveUserAsync(int id)
         {
             using (var context = new LangiumDbContext())
             {
