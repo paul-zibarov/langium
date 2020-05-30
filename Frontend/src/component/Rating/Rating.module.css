@@ -1,0 +1,69 @@
+.rating{
+    grid-area: r;
+    background-color: #fff;
+    border-radius: 20px;
+    border-radius: 20px 20px 20px 0px;
+    margin-top: 10px;
+    border:1px solid  #5A79B4;
+    line-height: normal;
+      
+    
+}
+.rating table{
+    position: absolute;
+    top: 245px;
+    text-align: center;
+    color: #538EF6;
+    height: 60vh;
+    width: 250px;
+    border-collapse: separate;
+    border-spacing: 10px;
+    border-radius: 20px;
+
+    display: grid;
+    overflow-y: scroll;
+    scrollbar-width: 100px;
+       
+    }
+.rating table td{
+    margin-left: 10px;
+    height:35px;
+    width: 200px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 2px solid #538EF6;
+    
+}
+.rating  h2{
+    padding: 7px;
+    margin: 20px;
+    margin-top: -3px;
+    text-align: center;
+    color: #538EF6;;
+    border: 2px solid #538EF6;
+    border-radius: 20px;
+    font-family: Calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 106.84%;
+    letter-spacing: 0.03em;
+    color: #538EF6;
+    
+    border-collapse: separate;
+    border-spacing: 10px;
+    margin-bottom: 10px;
+    width: 195px;
+    margin-left: 10px;
+    
+}
+.hr{
+    border: 1px solid  #5A79B4;
+    background-color: #5A79B4;
+    width: 200px;
+    margin-left: 15px;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+

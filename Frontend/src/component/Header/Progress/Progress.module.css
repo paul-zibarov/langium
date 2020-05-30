@@ -1,0 +1,57 @@
+.button{
+    margin-top: 3px;
+    padding-top: 10px;
+    border: 1px solid #fff;  
+    background-image: url(./progress.png);
+    background-position: top ;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    
+    position: fixed;
+    left: 65%;
+    color: #FFB633;
+    width: 100px;
+    height: 50px;
+    outline: none;
+ }
+
+
+.modal{
+  position: absolute;
+  width: 370px;
+  height: 410px;
+  background-color: #FFFFFF;
+  border: 1px solid #bdbfc2;
+  border-radius: 15px;
+  margin-left: 560px;
+  margin-top: 150px;
+  outline: none;
+}
+
+.modal:active,
+hr{
+  visibility:visible;
+}
+
+.hr{
+  border: 1px solid  #FFB633;
+  background-color: #FFB633;
+  width: 50px;
+  margin-left: 15px;
+  border-radius: 10px;
+  margin-top: 34px;
+}
+
+.button:focus
+.hr{
+  visibility: visible;
+}
+.button:active,
+.hr{
+  visibility:visible;
+}
+
+.button:disabled,
+.hr{
+  visibility: hidden;
+}

@@ -1,0 +1,27 @@
+.themes{    
+    background: #fff;
+    border-radius: 20px 20px 0px 20px;
+    text-decoration: none;
+    margin-top: 14px;
+    border: 1px solid #5A79B4 ;
+    display: grid;
+    grid-row: template rows 1px;
+    height: 49vh;
+    width: 270px;
+    margin-left: 100px;
+    
+    
+}
+.themeHeader{
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.item {
+    overflow-y: scroll;
+    scrollbar-width: 1px;
+    margin-top: -47px;
+  
+}
+
