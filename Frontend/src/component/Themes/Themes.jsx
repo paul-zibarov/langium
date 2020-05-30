@@ -15,11 +15,11 @@ const Themes=()=>{
         <ThemesHeader/>  
         <hr className={classes.hr}/>
         <div className={classes.item}>
-        <NavLink to="/food" activeClassName={classes.active}><Food/></NavLink>
-        <NavLink to="/animals" activeClassName={classes.active}><Animals/></NavLink>
-        <NavLink to="/newTheme" activeClassName={classes.active}><Animals/></NavLink>
-        <NavLink to="/newTheme" activeClassName={classes.active}><Animals/></NavLink>
-        <NavLink to="/newTheme" activeClassName={classes.active}><Animals/></NavLink>
+        <NavLink to="/langium/themes/food" activeClassName={classes.active}><Food/></NavLink>
+        <NavLink to="/langium/themes/animals" activeClassName={classes.active}><Animals/></NavLink>
+        <NavLink to="/langium/themes/newTheme" activeClassName={classes.active}><Animals/></NavLink>
+        <NavLink to="/langium/themes/newTheme" activeClassName={classes.active}><Animals/></NavLink>
+        <NavLink to="/langium/themes/newTheme" activeClassName={classes.active}><Animals/></NavLink>
        
         </div> 
         </nav>
