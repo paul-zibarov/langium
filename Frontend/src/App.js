@@ -20,14 +20,6 @@ const App=(props)=> {
       <Header store={props.store}/>
       <Rating store={props.store}/>
       <NavBar store={props.store}/>
-      <div className='app-wrapper-content'>
-        <Route path='/newWords'  render={ () => <NewWords store={props.store}/>}/>
-        <Route path='/vocabulary' render={()=> <Vocabulary/>}/>
-        <Route path='/training' render={()=> <Training/>}/>
-        <Route path='/progress' render={()=> <Progress/>}/>
-        <Route path='/hiUser' render={()=> <HiUser/>}/>
-        <Route path='/settings' render={()=> <Settings/>}/>            
-      </div>
     </div>
     </BrowserRouter>
   );
