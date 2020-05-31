@@ -11,7 +11,6 @@ namespace Langium.DataLayer
     {
         public LangiumDbContext()
         {
-            Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 
