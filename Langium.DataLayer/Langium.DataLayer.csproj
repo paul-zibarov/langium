@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Langium.Domain\Langium.Domain.csproj" />
     <ProjectReference Include="..\Langium.PresentationLayer\Langium.PresentationLayer.csproj" />
   </ItemGroup>
 

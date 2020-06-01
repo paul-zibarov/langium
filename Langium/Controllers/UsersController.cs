@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Langium.DataLayer.DataAccessObjects;
 using Langium.DataLayer.DbModels;
+using Langium.Domain;
 using Langium.PresentationLayer;
 using Langium.PresentationLayer.ViewModels;
 using Langium.WebAPI.ViewModels;
@@ -44,15 +45,22 @@ namespace Langium.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<UserModel>> Post(UserAuthDto user)
         {
-            var added = await _dao.AddUserAsync(user);
-            
-            if(added != null)
+            if(CheckHelper.IsValidEmail(user.Email))
             {
-                return Ok(added);
+                var added = await _dao.AddUserAsync(user);
+
+                if (added != null)
+                {
+                    return Ok(added);
+                }
+                else
+                {
+                    return BadRequest(added);
+                }
             }
             else
             {
-                return BadRequest(added);
+                return BadRequest(new DataResult<UserModel>(null, "INVALID_EMAIL"));
             }
             
         }
@@ -67,19 +75,24 @@ namespace Langium.Controllers
             {
                 if(user.Password == userData.CurrentPassword)
                 {
-                    if (!string.IsNullOrEmpty(userData.Email))
+                    if(CheckHelper.IsValidEmail(userData.Email))
                     {
-                        user.Email = userData.Email;
+                        if (!string.IsNullOrEmpty(userData.Email))
+                        {
+                            user.Email = userData.Email;
+                        }
+
+                        if (!string.IsNullOrEmpty(userData.NewPassword))
+                        {
+                            user.Password = userData.NewPassword;
+                        }
+
+                        var result = await _dao.UpdateUserAsync(user);
+
+                        return Ok(result);
                     }
 
-                    if (!string.IsNullOrEmpty(userData.NewPassword))
-                    {
-                        user.Password = userData.NewPassword;
-                    }
-
-                    var result = await _dao.UpdateUserAsync(user);
-
-                    return Ok(result);
+                    return BadRequest(new DataResult<UserModel>(null, "INVALID_EMAIL"));
                 }
                 
                 return BadRequest(new DataResult<UserModel>(null, "WRONG_PASSWORD"));

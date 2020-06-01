@@ -1,4 +1,5 @@
 ﻿using Langium.DataLayer.DbModels;
+using Langium.Domain;
 using Langium.PresentationLayer;
 using Langium.WebAPI.ViewModels;
 using Microsoft.EntityFrameworkCore;
@@ -66,7 +67,7 @@ namespace Langium.DataLayer.DataAccessObjects
                     {
                         Email = user.Email,
                         Password = user.Password,
-                        ActivationCode = Helper.GetActivationCode(),
+                        ActivationCode = ActivationHelper.GetActivationCode(),
                         Profile = new ProfileModel
                         {
                             Stats = new StatsModel(),

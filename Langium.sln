@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Langium.DataLayer", "Langiu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Langium.Test", "Langium.Test\Langium.Test.csproj", "{B1FBEC17-CAB0-46A6-9378-7D4DB153B6AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Langium.PresentationLayer", "Langium.PresentationLayer\Langium.PresentationLayer.csproj", "{F39A93E8-4DA2-4789-A508-3FC8294865ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Langium.PresentationLayer", "Langium.PresentationLayer\Langium.PresentationLayer.csproj", "{F39A93E8-4DA2-4789-A508-3FC8294865ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Langium.Domain", "Langium.Domain\Langium.Domain.csproj", "{862BCFF6-7220-487C-993B-962D1E1B5EFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{F39A93E8-4DA2-4789-A508-3FC8294865ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F39A93E8-4DA2-4789-A508-3FC8294865ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F39A93E8-4DA2-4789-A508-3FC8294865ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{862BCFF6-7220-487C-993B-962D1E1B5EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{862BCFF6-7220-487C-993B-962D1E1B5EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{862BCFF6-7220-487C-993B-962D1E1B5EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{862BCFF6-7220-487C-993B-962D1E1B5EFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
