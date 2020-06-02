@@ -5,29 +5,30 @@ import Rating from './component/Rating/Rating';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NavBar from './component/NavBar/NavBar';
 import LoginPage from './component/LoginPage/LoginPage';
-import { AuthProvider } from './component/Auth/Auth';
 import { PrivateRoute } from './component/Auth/PrivatePoute';
+import { AuthProvider } from './component/Auth/Auth';
 
+debugger;
 const App=(props)=> {
   return (
-    <AuthProvider>
     <BrowserRouter>
+    <AuthProvider>
     <Switch>
     <div className="app-wrapper">
-        <PrivateRoute  path='/langium/new-words' render={()=><Header />}/>
-        <Route  path='/langium/vocabulary' render={()=><Header />}/>
-        <Route  path='/langium/training' render={()=><Header />}/>
-        <Route  path='/langium/progress' render={()=><Header />}/>
-        <Route  path='/langium/hiuser' render={()=><Header />}/>
-        <Route  path='/langium/setting' render={()=><Header />}/>
-        <Route  path='/langium' render={()=><Header />}/>
-        <Route  path='/langium' render={()=><Rating/>}/>
-        <Route  path='/langium' render={()=><NavBar/>}/>
-        <Route exact path='/login' render={()=><LoginPage/>}/> 
+      <PrivateRoute  path='/langium/new-words' component={Header}/>
+        <PrivateRoute  path='/langium/vocabulary' component={Header}/>
+        <PrivateRoute  path='/langium/training' component={Header}/>
+        <PrivateRoute  path='/langium/progress' component={Header}/>
+        <PrivateRoute  path='/langium/hiuser' component={Header}/>
+        <PrivateRoute  path='/langium/setting' component={Header}/>
+        <PrivateRoute  path='/langium' component={Header}/>
+        <PrivateRoute  path='/langium' component={Rating}/>
+        <PrivateRoute  path='/langium' component={NavBar}/>
+        <Route exact path='/login' component={LoginPage}/> 
     </div>
     </Switch>
-    </BrowserRouter>
     </AuthProvider>
+    </BrowserRouter>
   );
 }
 

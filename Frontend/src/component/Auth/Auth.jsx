@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+
 
 const { Provider, Consumer: AuthConsumer} = React.createContext({
     isAuthorized: false
@@ -6,9 +8,11 @@ const { Provider, Consumer: AuthConsumer} = React.createContext({
 
 class AuthProvider extends React.Component{
     state={isAuthorized: false}
-
+    
     authorize = ()=>{
-        this.setState({isAuthorized: true})
+        this.setState({isAuthorized: true}, ()=>{
+            
+        })
     }
     render(){
         const {isAuthorized}= this.state;
@@ -33,5 +37,6 @@ export  function withAuth(WrappedComponent){
         }
     };
 }
+ const AuthProviderWithRouter = withRouter(AuthProvider)
 
-export  {AuthProvider};
+export  { AuthProviderWithRouter as AuthProvider};
