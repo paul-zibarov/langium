@@ -1,0 +1,121 @@
+
+    .beginer{
+    position: absolute;
+    width: 450px;
+    height: 50px;
+    left: 545px;
+    top: 282px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    font-family: Calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #254E97;
+    outline: none;
+    }
+    .medium{
+    position: absolute;
+    width: 450px;
+    height: 50px;
+    left: 545px;
+    top: 352px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    font-family: Calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #254E97;
+    outline: none;
+    }  
+    .advanced{
+    position: absolute;
+    width: 450px;
+    height: 50px;
+    left: 545px;
+    top: 420px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    font-family: Calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #254E97;
+    outline: none;
+    }        
+     .logo{
+    position: fixed;
+    left: 33%;
+    right: 30.55%;
+    top: 5.28%;
+    bottom: 75.28%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    }
+    .continue{
+    position: absolute;
+    background: #AADC1E;
+    margin-left: 65%;
+    margin-top: 550px;
+    width: 150px;
+    height: 35px;
+    outline: none;
+    font-family: Calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    outline: none;
+    }
+    .back{
+    position: absolute;
+    width: 150px;
+    height: 35px;
+    margin-left: 30%;
+    margin-top: 550px;
+    background: #5A79B4;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    font-family: Calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    outline: none;
+    }
+    .header{
+    position: absolute;
+    width: 450px;
+    height: 30px;
+    left: 570px;
+    top: 230px;
+    font-family: Calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #000000;
+    }

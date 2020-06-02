@@ -4,7 +4,7 @@ import layer1 from './Layer1.png';
 import layer2 from './Layer2.png';
 import logo from './Logo.png';
 import { withAuth } from '../Auth/Auth';
-import { Redirect } from 'react-router-dom';
+import { Redirect, NavLink } from 'react-router-dom';
 
 export default  withAuth(({isAuthorized, authorize})=>
   isAuthorized ? (<Redirect to='/langium'/>):(
@@ -19,6 +19,8 @@ export default  withAuth(({isAuthorized, authorize})=>
             <input className={classes.inpt2} placeholder={'Password'}/></div>
         <button className={classes.login} onClick={authorize}>Увійти</button>
         </form>
+        <NavLink to='/registration-page'>
         <div className={classes.registration}>Немає акаунту? Зареєструйся!</div>
-        </div>
+       </NavLink>
+       </div>
   ));
