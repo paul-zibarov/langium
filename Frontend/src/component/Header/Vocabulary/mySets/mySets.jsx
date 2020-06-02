@@ -1,4 +1,12 @@
 import React from 'react';
-import classes from  './Vocabulary.module.css';
-import Modal from 'react-modal';
+import classes from  './mySets.module.css';
 
+const MySet=(props)=>{
+    return(
+        <div className={classes.mySet}> 
+            {props.name}
+                       
+        </div>
+    );
+}
+export default MySet;
