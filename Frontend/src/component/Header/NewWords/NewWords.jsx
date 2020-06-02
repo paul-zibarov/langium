@@ -1,10 +1,12 @@
 import React from 'react';
 import classes from  './NewWords.module.css';
 import Modal from 'react-modal';
+import NewWord from '../newWord/NewWord';
 
 
 const  NewWords = (props) =>{
-    
+  let newWordEl=props.words.map(el=> <NewWord id={el.id} word={el.word} translate={el.translate}/>)
+ debugger;
   let subtitle;
   const [modalIsOpen,setIsOpen] = React.useState(false);
   function openModal() {
@@ -13,7 +15,6 @@ const  NewWords = (props) =>{
 
   function afterOpenModal() {
 
-    subtitle.style.color = '#ffffff';
       }
 
   function closeModal(){
@@ -37,9 +38,8 @@ const  NewWords = (props) =>{
         <Modal className={classes.modal}
           isOpen={modalIsOpen}
           onAfterOpen={afterOpenModal}
-          onRequestClose={closeModal}
-          
-        >
+          onRequestClose={closeModal}>
+          {newWordEl}
           <h2 ref={_subtitle => (subtitle = _subtitle)}></h2>
           <button className={classes.button2} onClick={onDontKnowButtonCkick}>
           <div className={classes.cls}>Вчити</div>   

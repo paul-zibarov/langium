@@ -1,17 +1,30 @@
-import React from 'react';
-import { connect } from 'react-redux';
 import NewWords from './NewWords';
-import store from '../../redux/redux-store';
+import React from 'react';
+import Axios from 'axios';
 
-let mapStateToProps=(state)=>{
-  return{
-    words: state.NewWords.words
-  }
+
+class NewWordsContainer  extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      words: [
+    {id:1, word:'Apple', translate:'Яблуко'},
+    {id:2, word:'House',  translate: 'Будинок'},
+    {id:3, word:'Car',  translate: 'Авто'},
+    {id:4, word:'Box',  translate: 'Коробка'},
+    {id:5, word:'Flower',  translate: 'Квітка'}
+      ]
+    }
+    }
+       
+render() {
+  debugger;
+    return (
+     <NewWords words={this.state.words}/>
+      
+     
+    );
 }
-let mapDispatchToProps=(dispatch)=>{
-  return{
-    knowWord: (wordId)
-  }
 }
 
-export default connect (mapStateToProps, mapDispatchToProps) (NewWords);
+export default NewWordsContainer;

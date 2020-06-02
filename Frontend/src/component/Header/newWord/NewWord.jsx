@@ -1,11 +1,10 @@
 import React from 'react';
-import classes from  './NewWords.module.css';
-import { NavLink } from 'react-router-dom';
+import classes from  './NewWord.module.css';
 
 const NewWord=(props)=>{
   return(
     <div className={classes.item}>
-      <NavLink to ={'/newWords/'}> {props.name}</NavLink>
+      {props.word} {props.translate}
     </div>
   );
 }
