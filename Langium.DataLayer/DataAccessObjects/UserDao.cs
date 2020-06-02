@@ -1,7 +1,12 @@
 ﻿using Langium.DataLayer.DbModels;
+using Langium.Domain;
+using Langium.PresentationLayer;
+using Langium.WebAPI.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,7 +14,7 @@ namespace Langium.DataLayer.DataAccessObjects
 {
     public class UserDao
     {
-        public async Task<UserModel> GetUserByIdAsync(int id)
+        public async Task<DataResult<UserModel>> GetUserByIdAsync(int id)
         {
             using (var context = new LangiumDbContext())
             {
@@ -17,45 +22,79 @@ namespace Langium.DataLayer.DataAccessObjects
                 {
                     var user = await context.Users
                     .Include(u => u.Profile)
-                        .ThenInclude(p => p.Stats)
-                     .Include(u => u.Profile)
-                        .ThenInclude(p => p.Categories)
                     .FirstOrDefaultAsync(u => u.Id == id);
 
                     if (user == null)
                     {
-                        return null;
-                    }
+                        return new DataResult<UserModel>(null, "USER_NOT_EXISTS");
+                    };
 
-                    return user;
+                    return new DataResult<UserModel> (user);
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.InnerException.Message);
-                    return null;
+                    return new DataResult<UserModel> (ex, ex.InnerException.Message);
                 }
             }
         }
 
-        public async Task<UserModel> AddUserAsync(UserModel user)
+        public async Task<DataResult<IEnumerable<UserModel>>> GetAllUsersAsync()
         {
             using (var context = new LangiumDbContext())
             {
                 try
                 {
-                    var added = await context.Users.AddAsync(user);
-                    await context.SaveChangesAsync();
-                    return added.Entity;
+                    var users = await context.Users
+                    .Include(u => u.Profile)
+                    .ToListAsync();
+
+                    return new DataResult<IEnumerable<UserModel>> (users);
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.InnerException.Message);
-                    return null;
+                    return new DataResult<IEnumerable<UserModel>> (ex, ex.InnerException.Message);
                 }
             }
         }
 
-        public async Task<UserModel> UpdateUserAsync(UserModel user)
+        public async Task<DataResult<UserModel>> AddUserAsync(UserAuthDto user)
+        {
+            using (var context = new LangiumDbContext())
+            {
+                try
+                {
+                    var newUser = new UserModel()
+                    {
+                        Email = user.Email,
+                        Password = user.Password,
+                        ActivationCode = ActivationHelper.GetActivationCode(),
+                        Profile = new ProfileModel
+                        {
+                            Stats = new StatsModel(),
+                            Categories = new List<CategoryModel>()
+                        }
+                    };
+
+                    var added = await context.Users.AddAsync(newUser);
+                    await context.SaveChangesAsync();
+
+                    return new DataResult<UserModel> (added.Entity);
+                }
+                catch (Exception ex)
+                {
+                    if(ex.InnerException.Message.Contains("23505"))
+                    {
+                        return new DataResult<UserModel>(ex, "USER_AlREADY_EXISTS");
+                    }
+                    else
+                    {
+                        return new DataResult<UserModel>(ex, ex.InnerException.Message);
+                    }
+                }
+            }
+        }
+
+        public async Task<DataResult<UserModel>> UpdateUserAsync(UserModel user)
         {
             using (var context = new LangiumDbContext())
             {
@@ -63,17 +102,19 @@ namespace Langium.DataLayer.DataAccessObjects
                 {
                     context.Entry(user).State = EntityState.Modified;
                     await context.SaveChangesAsync();
-                    return user;
+
+                    var updatedUser = context.Users.FirstOrDefault(u => u.Id == user.Id);
+
+                    return new DataResult<UserModel> (updatedUser);
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.InnerException.Message);
-                    return null;
+                    return new DataResult<UserModel>(ex, ex.InnerException.Message);
                 }
             }
         }
 
-        public async Task<bool> RemoveUserAsync(int id)
+        public async Task<DataResult<bool>> RemoveUserAsync(int id)
         {
             using (var context = new LangiumDbContext())
             {
@@ -83,18 +124,17 @@ namespace Langium.DataLayer.DataAccessObjects
 
                     if (entity == null)
                     {
-                        return false;
+                        return new DataResult<bool>(null, "USER_NOT_EXISTS");
                     }
 
                     context.Remove(entity);
                     await context.SaveChangesAsync();
 
-                    return true;
+                    return new DataResult<bool>(true);
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.InnerException.Message);
-                    return false;
+                    return new DataResult<bool>(ex, ex.Message);
                 }
                 
             }

@@ -1,4 +1,5 @@
 ﻿using Langium.DataLayer.DbModels;
+using Langium.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -11,7 +12,6 @@ namespace Langium.DataLayer
     {
         public LangiumDbContext()
         {
-            Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 
@@ -45,7 +45,7 @@ namespace Langium.DataLayer
             builder.Property(u => u.Password).HasMaxLength(30); //password size constraint
 
             builder.Property(u => u.IsActivated).HasDefaultValue(false); //default value is activated
-            builder.Property(u => u.ActivationCode).HasDefaultValue(Helper.GetActivationCode()); //default value activation code
+            builder.Property(u => u.ActivationCode).HasDefaultValue(ActivationHelper.GetActivationCode()); //default value activation code
             builder.Property(u => u.RegistrationDate).HasDefaultValueSql("now()").ValueGeneratedOnAdd(); //default value registration date
         }
 
