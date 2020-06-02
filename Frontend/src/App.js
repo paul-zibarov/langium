@@ -7,6 +7,8 @@ import NavBar from './component/NavBar/NavBar';
 import LoginPage from './component/LoginPage/LoginPage';
 import { PrivateRoute } from './component/Auth/PrivatePoute';
 import { AuthProvider } from './component/Auth/Auth';
+import Registration from './component/Registration Page/registration';
+import Level from './component/Registration Page/LevelOfKnowladge/Level';
 
 debugger;
 const App=(props)=> {
@@ -15,7 +17,9 @@ const App=(props)=> {
     <AuthProvider>
     <Switch>
     <div className="app-wrapper">
-      <PrivateRoute  path='/langium/new-words' component={Header}/>
+        <Route path='/registration-page' component={Registration}/>
+        <Route path='/choise-your-level' component={Level}/>
+        <PrivateRoute  path='/langium/new-words' component={Header}/>
         <PrivateRoute  path='/langium/vocabulary' component={Header}/>
         <PrivateRoute  path='/langium/training' component={Header}/>
         <PrivateRoute  path='/langium/progress' component={Header}/>
@@ -24,7 +28,7 @@ const App=(props)=> {
         <PrivateRoute  path='/langium' component={Header}/>
         <PrivateRoute  path='/langium' component={Rating}/>
         <PrivateRoute  path='/langium' component={NavBar}/>
-        <Route exact path='/login' component={LoginPage}/> 
+        <Route  path='/login' component={LoginPage}/> 
     </div>
     </Switch>
     </AuthProvider>

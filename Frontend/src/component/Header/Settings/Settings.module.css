@@ -14,129 +14,129 @@
   
   }
   
-.modal{
-position: fixed;
-width: 500px;
-height: 550px;
-left: 33%;
-top: 100px;
-background-color: #FFFFFF;
-border: 1px solid #bdbfc2;
-border-radius: 15px;
-      
-outline: none;
-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  }
-
-.modalHeader{
-position: fixed;
-width: 246px;
-height: 47.19px;
-left: 620px;
-top: 165px;
-
-background: #5A79B4;
-
-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-border-radius: 20px;
-
-
-}
-.headerText{
-text-align: center;
-letter-spacing: 0.03em;
-color: #FFFFFF;
-font-family: Calibri;
-font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 106.84%;
-margin-top: 10px;
-}
-
-.sett{
-  margin-left: 220px;
-  margin-top: -10px;
-}
-  
-  .button1{
-    position: fixed;
-    width: 300px;
-    height: 45px;
-    left: 590px;
-    top: 480px;
-    background: #ED6362;
-    outline: none;
-   
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    font-family: Calibri;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 106.84%;
-
-
-    text-align: center;
-    letter-spacing: 0.03em;
-
-    color: #FFFFFF;
-  }
-  
-  .button2{
-    position: fixed;
-    width: 300px;
-    height: 45px;
-    left: 590px;
-    top: 550px;
-    background: #AADC1E;
-    outline: none;
+  .modal{
+  position: fixed;
+  width: 500px;
+  height: 550px;
+  left: 33%;
+  top: 100px;
+  background-color: #FFFFFF;
+  border: 1px solid #bdbfc2;
+  border-radius: 15px;
         
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    }
 
-    font-family: Calibri;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 106.84%;
+  .modalHeader{
+  position: fixed;
+  width: 246px;
+  height: 47.19px;
+  left: 620px;
+  top: 165px;
+
+  background: #5A79B4;
+
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
 
 
-    text-align: center;
-    letter-spacing: 0.03em;
-
-    color: #FFFFFF;
   }
+  .headerText{
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+  font-family: Calibri;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 106.84%;
+  margin-top: 10px;
+  }
+
+  .sett{
+    margin-left: 220px;
+    margin-top: -10px;
+  }
+    
+    .exit{
+      position: fixed;
+      width: 300px;
+      height: 45px;
+      left: 590px;
+      top: 480px;
+      background: #ED6362;
+      outline: none;
+    
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      font-family: Calibri;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 106.84%;
+
+
+      text-align: center;
+      letter-spacing: 0.03em;
+
+      color: #FFFFFF;
+    }
+    
+    .return{
+      position: fixed;
+      width: 300px;
+      height: 45px;
+      left: 590px;
+      top: 550px;
+      background: #AADC1E;
+      outline: none;
+          
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+
+      font-family: Calibri;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 106.84%;
+
+
+      text-align: center;
+      letter-spacing: 0.03em;
+
+      color: #FFFFFF;
+    }
+    .hr{
+      border: 1px solid  #91CBE8;
+      background-color: #91CBE8;
+      width: 50px;
+      border-radius: 10px;
+      margin-top: 54px;
+      margin-left: -2px;
+    }
+
+    .hr2{
+      position: fixed;
+      width: 480px;
+      left: 510px;
+      top: 215px;
+
+      border: 1px solid #000000;
+      background-color: #000000;
+    }
+
+    .button:focus
   .hr{
-    border: 1px solid  #91CBE8;
-    background-color: #91CBE8;
-    width: 50px;
-    border-radius: 10px;
-    margin-top: 54px;
-    margin-left: -2px;
+    visibility: visible;
+  }
+  .button:active,
+  .hr{
+    visibility:visible;
   }
 
-  .hr2{
-    position: fixed;
-    width: 480px;
-    left: 510px;
-    top: 215px;
-
-    border: 1px solid #000000;
-    background-color: #000000;
+  .button:disabled,
+  .hr{
+    visibility: hidden;
   }
-
-  .button:focus
-.hr{
-  visibility: visible;
-}
-.button:active,
-.hr{
-  visibility:visible;
-}
-
-.button:disabled,
-.hr{
-  visibility: hidden;
-}
 

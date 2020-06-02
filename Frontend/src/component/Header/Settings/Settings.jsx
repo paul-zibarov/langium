@@ -2,8 +2,9 @@ import React from 'react';
 import classes from  './Settings.module.css';
 import Modal from 'react-modal';
 import setting from './setting.png'
+import { NavLink, Redirect } from 'react-router-dom';
 
-function Settings(){
+function Settings(autorize){
     let subtitle;
     const [modalIsOpen,setIsOpen] = React.useState(false);
     function openModal() {
@@ -28,21 +29,24 @@ function Settings(){
             isOpen={modalIsOpen}
             onAfterOpen={afterOpenModal}
             onRequestClose={closeModal}
-            style={classes.modal}
-            
-          >
+            style={classes.modal}>
+
             <h2 ref={_subtitle => (subtitle = _subtitle)}></h2>
             <img src={setting} className={classes.sett}/> 
             <div className={classes.modalHeader}>
               <div className={classes.headerText}>Налаштування</div>
             </div>
             <hr className={classes.hr2}></hr>
-            <button className={classes.button1} >
-            <div className={classes.cls}>Видалити акаунт</div>   
-           </button> 
-           <button className={classes.button2}>
-            <div className={classes.ok}>Вийти з налаштувань</div>
-            </button>
+            <NavLink to='/login'>
+            <div>
+            <button className={classes.exit} onClick={<Redirect to='/login'/>}>Вихід</button>
+            </div>
+            </NavLink>
+             <div>
+            <NavLink to='/langium'>
+            <button className={classes.return} onClick={closeModal}>Повернутися назад</button>
+            </NavLink>
+            </div> 
           </Modal>
         </div>
 
