@@ -2,9 +2,16 @@ import React from 'react';
 import classes from  './NewWords.module.css';
 import Modal from 'react-modal';
 import NewWord from '../newWord/NewWord';
+import * as Axios from 'axios';
 
 
 const  NewWords = (props) =>{
+  Axios.get('https://social-network.samuraijs.com/api/1.0/users')
+  .then(response =>{
+    let list=response.data.items;
+   debugger;
+  })
+
   let newWordEl=props.words.map(el=> <NewWord id={el.id} word={el.word} translate={el.translate}/>)
  debugger;
   let subtitle;

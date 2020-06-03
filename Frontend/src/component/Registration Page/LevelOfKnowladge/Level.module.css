@@ -119,3 +119,16 @@
     letter-spacing: 0.04em;
     color: #000000;
     }
+    .beginer:active{
+    background-color: #5A79B4;
+    color: #fff;
+    }
+    .medium:active{
+    background-color: #5A79B4;
+    color: #fff;
+    }
+    .advanced:active{
+    background-color: #5A79B4;
+    color: #fff;
+    }
+        

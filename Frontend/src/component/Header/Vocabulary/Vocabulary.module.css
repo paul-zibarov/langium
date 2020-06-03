@@ -168,7 +168,7 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   }
 
-  .itemOfList{
+  .itemInList{
     width: 285px;
     height: 36px;
     margin-left: 10px;
@@ -190,11 +190,7 @@
     color: #000;
   }
 
-  .itemOfList.isActive{
-    background-color: palevioletred;
-  }
-
-  .wordInList{
+   .wordInList{
     margin-top: -240px;
     margin-left: 320px;
     font-family: Calibri;
@@ -266,7 +262,17 @@
     width: 85%;
     height: 30px;
     margin-left: 20px;
-    margin-top: 85px;
+    margin-top: 45px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    outline: none;
+  }
+  .transcription{
+    width: 85%;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 15px;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
@@ -276,17 +282,18 @@
     width: 85%;
     height: 30px;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 15px;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     outline: none;
+
   }
   .addToCategory{
     width: 120px;
     height: 30px;
-    margin-left: 150px;
-    margin-top: 40px;
+    margin-left: 140px;
+    margin-top: 30px;
     background: #AADC1E;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
@@ -386,4 +393,11 @@
   text-align: center;
   padding: 5 5 5 5px;
   outline: none;
+}
+.itemOfList :active{
+  background-color: royalblue;;
+}
+.itemInList:active{
+background-color: #5A79B4;
+color: #fff;
 }
