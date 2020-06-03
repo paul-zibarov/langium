@@ -22,6 +22,7 @@ namespace Langium.DataLayer.DataAccessObjects
                 {
                     var user = await context.Users
                     .Include(u => u.Profile)
+                        .ThenInclude(p => p.Categories)
                     .FirstOrDefaultAsync(u => u.Id == id);
 
                     if (user == null)
@@ -46,6 +47,7 @@ namespace Langium.DataLayer.DataAccessObjects
                 {
                     var users = await context.Users
                     .Include(u => u.Profile)
+                        .ThenInclude(p => p.Categories)
                     .ToListAsync();
 
                     return new DataResult<IEnumerable<UserModel>> (users);
@@ -136,7 +138,6 @@ namespace Langium.DataLayer.DataAccessObjects
                 {
                     return new DataResult<bool>(ex, ex.Message);
                 }
-                
             }
         }
     }
