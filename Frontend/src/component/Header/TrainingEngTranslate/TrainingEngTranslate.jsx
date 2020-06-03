@@ -1,10 +1,13 @@
 import React from 'react';
-import classes from  './Training.module.css';
+import classes from  './TrainingEngTranslate.module.css';
 import Modal from 'react-modal';
 
-function TrainingEngTranslate(){
+const  TrainingEngTranslate =(props)=>{
+    //let elll= props.words.map(el => <Training id={el.id} word={el.word} translate={el.translate}/>)
+    debugger;
     let subtitle;
     const [modalIsOpen,setIsOpen] = React.useState(false);
+    
     function openModal() {
       setIsOpen(true);
     }
@@ -20,32 +23,26 @@ function TrainingEngTranslate(){
       return (
         <div className={classes.training}>
           <button className={classes.button} onClick={openModal} >
-          </button> 
+              <h4 className={classes.h4}>Тренування</h4>
+              <hr className={classes.hr}/>
+              </button> 
           
-          <Modal className={classes.modal2}
+          <Modal className={classes.modal}
             isOpen={modalIsOpen}
             onAfterOpen={afterOpenModal}
             onRequestClose={closeModal}
-            style={classes.modal2}
-           >
+            style={classes.modal}>
+
             <h2 ref={_subtitle => (subtitle = _subtitle)}></h2>
             <div className={classes.modalHeader}>
-              <div className={classes.headerText}>Оберіть переклад</div>
+             <div className={classes.headerText}>Надрукуйте переклад</div>
             </div>
-            <textarea className={classes.textarea}>
-            <button className={classes.button1} >
-            <div className={classes.cls}>translate</div>   
-           </button> 
-           <button className={classes.button2}>
-            <div className={classes.ok}>translate</div>
-            </button>
-            <button className={classes.button3} >
-            <div className={classes.cls}>translate</div>   
-           </button> 
-           <button className={classes.button4} >
-            <div className={classes.cls}>translate</div>   
-           </button> 
-           </textarea>
+               <div>{props.words}</div>
+            <form className={classes.enterTranslate}></form>
+            <button className={classes.ok} ></button> 
+           <div>
+            <input className={classes.text}/>
+           </div>
           </Modal>
         </div>
 

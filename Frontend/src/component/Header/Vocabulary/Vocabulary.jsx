@@ -4,10 +4,7 @@ import Modal from 'react-modal';
 import MySet from './mySets/mySets';
 import { NavLink } from 'react-router-dom';
 
-
 const Vocabulary=(props)=>{
-  debugger;
- 
   let subtitle;
   const [modalIsOpen,setIsOpen] = React.useState(false);
   const [addWordModalIsOpen, addWordSetIsOpen] = React.useState(false);
@@ -53,7 +50,8 @@ const Vocabulary=(props)=>{
   }
 
   function listOfWordsOfCategory(){
-  return('listOfWords1');
+    alert('list')
+ 
   }
 
     return (
@@ -76,9 +74,9 @@ const Vocabulary=(props)=>{
              <MySet id={props.category.id} key={props.activeCategory}/>
              {props.category.map((category, index)=>(
                <div>
-                 <NavLink to={'/langium/vocabulary/'+category.name} >
-                  <button isActive={true} className={classes.itemOfList} key={index} 
-                  onClick={listOfWordsOfCategory}>{category.name}</button>
+                 <NavLink to={'/langium/vocabulary/'+category.name} activeClassName={classes.active} >
+                  <button className={classes.itemInList} key={index} onClick={listOfWordsOfCategory}
+                  >{category.name}</button>
                   </NavLink>
                    </div>
              ))}
@@ -121,7 +119,7 @@ const Vocabulary=(props)=>{
           <div>Слова поточного набору:</div>
           </button>
           <div className={classes.wordsOfCurrentCat}>
-
+              
              <div  className={classes.wordInList}>
              <MySet id={props.listOfWordsAnimal.id} word={props.listOfWordsAnimal.word} translate={props.listOfWordsAnimal.translate}/>
              {props.listOfWordsAnimal.map((words, index)=>(
@@ -157,6 +155,9 @@ const Vocabulary=(props)=>{
             </div>
             <div>
               <input className={classes.word} placeholder={'Слово:'}></input>
+            </div>
+            <div>
+              <input className={classes.transcription} placeholder={'Транскрипція:'}></input>
             </div>
             <div>
               <input className={classes.translate} placeholder={'Переклад:'}></input>

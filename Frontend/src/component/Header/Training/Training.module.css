@@ -1,28 +1,27 @@
   .button{
-      outline: none;
-      padding-top: 20px;
-      border: 1px solid #fff;  
-      background-image: url(./training.png);
-      background-position: center ;
-      background-repeat: no-repeat;
-      background-color: #fff;
-      margin-top: -10px;
-      
-      position: fixed;
-      left: 50%;
-      color: #47A4F1;
-      width: 100px;
-      height: 60px;
-      padding-top: 23px;
+    outline: none;
+    padding-top: 20px;
+    border: 1px solid #fff;  
+    background-image: url(./training.png);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    margin-top: -10px;
+    position: fixed;
+    left: 50%;
+    color: #47A4F1;
+    width: 100px;
+    height: 60px;
+    padding-top: 23px;
     
     }
 
   .modal{
   position: fixed;
   width: 500px;
-  height: 500px;
+  height: 420px;
   left: 32%;
-  top: 148px;
+  top: 130px;
   background-color: #FFFFFF;
   border: 1px solid #bdbfc2;
   border-radius: 15px;
@@ -33,9 +32,9 @@
 
   .modalHeader{
   position: fixed;
-  width: 246px;
+  width: 300px;
   height: 47.19px;
-  left: 610px;
+  left: 585px;
   top: 162.16px;
   
   background: #5A79B4;
@@ -55,56 +54,91 @@
   margin-top: 10px;
   }
     
-    .button1{
-      position: fixed;
-      width: 300px;
-      height: 45px;
-      left: 590px;
-      top: 360px;
-      background: #FFFFFF;
-          
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-      border-radius: 20px;
-      outline: none;
-    }
-    
-    .button2{
-      position: fixed;
-      width: 300px;
-      height: 45px;
-      left: 590px;
-      top: 430px;
-      background: #FFFFFF;
-          
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-      border-radius: 20px;
-      outline: none;
-    }
-    .button3{
-      position: fixed;
-      width: 300px;
-      height: 45px;
-      left: 590px;
-      top: 500px;
-      background: #FFFFFF;
-          
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-      border-radius: 20px;
-      outline: none;
-    }
-    .button4{
-      position: fixed;
-      width: 300px;
-      height: 45px;
-      left: 590px;
-      top: 570px;
-      background: #FFFFFF;
-          
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-      border-radius: 20px;
-      outline: none;
-    }
+ .checkTranslate{
+  position: absolute;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  width: 350px;
+  height: 50px;
+  border: 1px solid #bdbfc2;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: center ;
+  margin-top: 90px;
+  margin-left: 75px;
+  outline: none;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #000;
+  font-family: Calibri;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 106.84%;
+}
   
+.engTranslate{
+  position: absolute;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  width: 350px;
+  height: 50px;
+  border: 1px solid #bdbfc2;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: center ;
+  margin-top: 160px;
+  margin-left: 75px;
+  outline: none;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #000;
+  font-family: Calibri;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 106.84%;
+}
+.ukrTranslate{
+  position: absolute;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  width: 350px;
+  height: 50px;
+  border: 1px solid #bdbfc2;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: center ;
+  margin-top: 230px;
+  margin-left: 75px;
+  outline: none;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #000;
+  font-family: Calibri;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 106.84%;
+}
+.foldLett{
+  position: absolute;
+  width: 350px;
+  height: 50px;
+  border: 1px solid #bdbfc2;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-position: center ;
+  margin-top: 300px;
+  margin-left: 75px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  outline: none;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #000;
+  font-family: Calibri;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 106.84%;
+}
     .hr{
       border: 1px solid  #47A4F1;
       background-color: #47A4F1;
@@ -127,5 +161,308 @@
   .hr{
     visibility: hidden;
   }
-  
-  
+  .checkTranslate:active{
+    background-color: #5A79B4;
+    color: #fff;
+  }
+  .engTranslate:active{
+    background-color: #5A79B4;
+    color: #fff;
+  }
+  .ukrTranslate:active{
+    background-color: #5A79B4;
+    color: #fff;
+  }
+  .foldLett:active{
+    background-color: #5A79B4;
+    color: #fff;
+  }
+
+  /*TR1_MODAL*/
+  .tr1Modal{
+    position: fixed;
+    width: 500px;
+    height: 420px;
+    left: 32%;
+    top: 130px;
+    background-color: #FFFFFF;
+    border: 1px solid #bdbfc2;
+    border-radius: 15px;
+          
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+
+
+    .Tr1modalHeader{
+      position: fixed;
+      width: 270px;
+      height: 47.19px;
+      left: 600px;
+      top: 150px;  
+      background: #5A79B4;
+      border-radius: 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+
+    }
+    .headerTextTr1{
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: #FFFFFF;
+      font-family: Calibri;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 106.84%;
+      margin-top: 10px;
+      }
+        
+     .okTR1{
+      position: absolute;
+      background: #6ACA9C;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      width: 60px;
+      height: 60px;
+      border: 1px solid #6ACA9C;
+      border-radius: 50px;
+      background-image: url(../NewWords/OK.png);
+      background-repeat: no-repeat;
+      background-position: center ;
+      margin-top: 120px;
+      margin-left: 120px;
+      outline: none;
+    }
+      .textTR1{
+        position: absolute;
+        margin-left: 5px;
+        margin-top: 20px;
+        width: 100%;
+        height: 45px;
+        font-family: Calibri;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 106.84%;
+        letter-spacing: 0.03em;
+        color: #000000;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        outline: none;
+      }
+      .hr1{
+        border: 1px solid  #47A4F1;
+        background-color: #47A4F1;
+        width: 90%;
+        margin-left: 20px;
+        border-radius: 10px;
+        margin-top: 135px;
+      }
+
+  /*TR2_MODAL*/
+  .tr2Modal{
+    position: fixed;
+    width: 500px;
+    height: 420px;
+    left: 32%;
+    top: 130px;
+    background-color: #FFFFFF;
+    border: 1px solid #bdbfc2;
+    border-radius: 15px;
+          
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+
+
+    .Tr2modalHeader{
+      position: fixed;
+      width: 270px;
+      height: 47.19px;
+      left: 600px;
+      top: 150px;  
+      background: #5A79B4;
+      border-radius: 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+
+    }
+    .headerTextTr2{
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: #FFFFFF;
+      font-family: Calibri;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 106.84%;
+      margin-top: 10px;
+      }
+        
+     .okTR2{
+      position: absolute;
+      background: #6ACA9C;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      width: 60px;
+      height: 60px;
+      border: 1px solid #6ACA9C;
+      border-radius: 50px;
+      background-image: url(../NewWords/OK.png);
+      background-repeat: no-repeat;
+      background-position: center ;
+      margin-top: 120px;
+      margin-left: 120px;
+      outline: none;
+    }
+      .textTR2{
+        position: absolute;
+        margin-left: 5px;
+        margin-top: 20px;
+        width: 100%;
+        height: 45px;
+        font-family: Calibri;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 106.84%;
+        letter-spacing: 0.03em;
+        color: #000000;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        outline: none;
+      }
+      .hr2{
+        border: 1px solid  #47A4F1;
+        background-color: #47A4F1;
+        width: 90%;
+        margin-left: 20px;
+        border-radius: 10px;
+        margin-top: 135px;
+      }
+
+   /*TR3_MODAL*/
+    .tr3Modal{
+      position: fixed;
+      width: 500px;
+      height: 420px;
+      left: 32%;
+      top: 130px;
+      background-color: #FFFFFF;
+      border: 1px solid #bdbfc2;
+      border-radius: 15px;
+            
+      outline: none;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      }
+
+
+      .Tr3modalHeader{
+        position: fixed;
+        width: 270px;
+        height: 47.19px;
+        left: 600px;
+        top: 150px;  
+        background: #5A79B4;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+
+      }
+      .headerTextTr3{
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #FFFFFF;
+        font-family: Calibri;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 106.84%;
+        margin-top: 10px;
+        }
+          
+      .var1{
+        position: absolute;
+        background: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        width: 110%;
+        height: 50px;
+        border-radius: 25px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        margin-top: 5px;
+        margin-left: -10px;
+        outline: none;
+
+        font-family: Calibri;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 44px;
+        text-align: center;
+        color: #000000;
+      }
+      .var2{
+        position: absolute;
+        background: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        width: 110%;
+        height: 50px;
+        border-radius: 25px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        margin-top: 65px;
+        margin-left: -10px;
+        outline: none;
+
+        font-family: Calibri;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 44px;
+        text-align: center;
+        color: #000000;
+      }
+      .var3{
+        position: absolute;
+        background: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        width: 110%;
+        height: 50px;
+        border-radius: 25px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        margin-top: 125px;
+        margin-left: -10px;
+        outline: none;
+
+        font-family: Calibri;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 44px;
+        text-align: center;
+        color: #000000;
+      }
+      .var4{
+        position: absolute;
+        background: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        width: 110%;
+        height: 50px;
+        border-radius: 25px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        margin-top: 185px;
+        margin-left: -10px;
+        outline: none;
+
+        font-family: Calibri;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 44px;
+        text-align: center;
+        color: #000000;
+      }
+        .hr3{
+          border: 1px solid  #47A4F1;
+          background-color: #47A4F1;
+          width: 90%;
+          margin-left: 10px;
+          border-radius: 10px;
+          margin-top: 100px;
+        }
+    

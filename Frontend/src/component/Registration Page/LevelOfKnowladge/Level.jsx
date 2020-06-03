@@ -15,7 +15,7 @@ export default withAuth(({isAuthorized, authorize})=>
     (       <div className={classes.container}>
             <img className={classes.logo} src={logo}/>
             <div className={classes.header}>ОБЕРІТЬ ВАШ РІВЕНЬ АНГЛІЙСЬКОЇ!</div>
-         <form className={classes.level}>
+        
           <div>
             <button className={classes.beginer}>Новачок</button></div>
           <div>
@@ -31,7 +31,7 @@ export default withAuth(({isAuthorized, authorize})=>
         <NavLink to='/langium'>
         <button className={classes.continue} onClick={authorize}>Продовжити</button>
         </NavLink> 
-        </form>
+        
         </div>
      ));
   

@@ -22,7 +22,7 @@ class VocabularyContainer  extends React.Component {
       {id:4, word:'Sheep', translate:'Вівця'},
       {id:5, word:'Goat', translate:'Козел'}
     ],
-      activeCategory: 0,
+      activeCategory: true,
      }
   };
          
