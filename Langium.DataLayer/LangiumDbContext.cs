@@ -12,6 +12,7 @@ namespace Langium.DataLayer
     {
         public LangiumDbContext()
         {
+            //Database.EnsureDeleted();
             Database.EnsureCreated();
         }
 
@@ -74,8 +75,9 @@ namespace Langium.DataLayer
 
         private void CategoryConfigure(EntityTypeBuilder<CategoryModel> builder)
         {
-            builder.Property(c => c.Name).IsRequired(); //category required constraint
-            builder.Property(c => c.Name).HasMaxLength(30); //category size constraint
+            builder.Property(c => c.Name).IsRequired(); //category name required constraint
+            builder.Property(c => c.Name).HasMaxLength(30); //category name size constraint
+            builder.Property(c => c.Description).HasMaxLength(300); // category description size constraint
         }
 
         private void LexemeConfigure(EntityTypeBuilder<LexemeModel> builder)
