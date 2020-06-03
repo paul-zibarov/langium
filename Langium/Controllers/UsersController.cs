@@ -20,24 +20,41 @@ namespace Langium.Controllers
 
         // GET api/users
         [HttpGet]
-        public async Task<DataResult<IEnumerable<UserModel>>> Get()
+        public async Task<ActionResult<IEnumerable<UserModel>>> Get()
         {
-            return await _dao.GetAllUsersAsync();
+            var result =  await _dao.GetAllUsersAsync();
+
+            if (result.Data.Count() != 0 && result.Succeded && result.Exception == null && string.IsNullOrEmpty(result.ErrorMessage))
+            {
+                return Ok(result);
+            }
+            else if (result.Exception == null)
+            {
+                return NotFound(result);
+            }
+            else
+            {
+                return BadRequest(result);
+            }
         }
 
         // GET api/users/{id}
         [HttpGet("{id}")]
         public async Task<ActionResult<UserModel>> Get(int id)
         {
-            var user = await _dao.GetUserByIdAsync(id);
+            var result = await _dao.GetUserByIdAsync(id);
 
-            if(user != null)
+            if (result.Data != null && result.Succeded && result.Exception == null && string.IsNullOrEmpty(result.ErrorMessage))
             {
-                return Ok(user);
+                return Ok(result);
+            }
+            else if (result.Exception == null)
+            {
+                return NotFound(result);
             }
             else
             {
-                return NotFound(user);
+                return BadRequest(result);
             }
         }
 
@@ -49,7 +66,7 @@ namespace Langium.Controllers
             {
                 var added = await _dao.AddUserAsync(user);
 
-                if (added != null)
+                if (added.Data != null)
                 {
                     return Ok(added);
                 }
