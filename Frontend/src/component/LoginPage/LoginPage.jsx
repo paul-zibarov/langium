@@ -14,9 +14,9 @@ export default  withAuth(({isAuthorized, authorize})=>
             <img className={classes.layer2} src={layer2}/>
           <form className={classes.loginForm}>
           <div>
-            <input className={classes.inpt1} placeholder={'Login'}/></div>
+            <input className={classes.inpt1} placeholder={'Login: '}/></div>
           <div>
-            <input className={classes.inpt2} placeholder={'Password'}/></div>
+            <input className={classes.inpt2} placeholder={'Password: '}/></div>
         <button className={classes.login} onClick={authorize}>Увійти</button>
         </form>
         <NavLink to='/registration-page'>

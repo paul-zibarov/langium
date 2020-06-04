@@ -7,8 +7,8 @@ import NavBar from './component/NavBar/NavBar';
 import LoginPage from './component/LoginPage/LoginPage';
 import { PrivateRoute } from './component/Auth/PrivatePoute';
 import { AuthProvider } from './component/Auth/Auth';
-import Registration from './component/Registration Page/registration';
 import Level from './component/Registration Page/LevelOfKnowladge/Level';
+import RegPageNew from './component/Registration Page/RegPageNew/RegPageNew';
 
 debugger;
 const App=(props)=> {
@@ -17,7 +17,7 @@ const App=(props)=> {
     <AuthProvider>
     <Switch>
     <div className="app-wrapper">
-        <Route path='/registration-page' component={Registration}/>
+        <Route path='/registration-page' component={RegPageNew}/>
         <Route path='/choise-your-level' component={Level}/>
         <PrivateRoute  path='/langium/new-words' component={Header}/>
         <PrivateRoute  path='/langium/vocabulary' component={Header}/>
