@@ -1,0 +1,105 @@
+.button{
+    padding-top: 12px;
+    border: 1px solid #fff;  
+    background-position: top ;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    
+    margin-top: 5px;
+    position: fixed;
+    left: 35%;
+    color: #FFBB24;;
+    width: 100px;
+    height: 50px;
+    outline: none;
+    
+  
+}
+
+.modal{
+    position: absolute;
+    width: 886px;
+    height: 550px;
+    background-color: #FFFFFF;
+    border: 1px solid #bdbfc2;
+    border-radius: 15px;
+    margin-left: 310px;
+    margin-top: 110px;
+    outline: none;
+  
+    
+  }
+  
+  .button1{
+    position: fixed;
+    background-color:#6ACA9C ;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #6ACA9C;
+    border-radius: 50px;
+    
+    background-repeat: no-repeat;
+    background-position: center ;
+    margin-top: 230px;
+    margin-left: 260px;
+    outline: none;
+  }
+  
+  .button2{
+    position: fixed;
+    background-color: #ED6362 ;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ED6362;
+    border-radius: 50px;
+    
+    background-repeat: no-repeat;
+    background-position: center ;
+    margin-top: 230px;
+    margin-left: 40px;
+    outline: none;
+  }
+  .cls{
+    margin-top: 65px;
+  font-family: Abhaya Libre ExtraBold;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: #000000;
+  }
+
+  .ok{
+  margin-top: 65px;
+  font-family: Abhaya Libre ExtraBold;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: #000000;
+  width: 100px;
+  margin-left: -30px;
+  }
+ 
+  .hr{
+    border: 1px solid  #FFBB24;
+    width: 50px;
+    margin-left: 20px;
+    border-radius: 10px;
+    margin-top: -15px;
+  }
+
+  .button:focus
+.hr{
+  visibility: visible;
+}
+.button:active,
+.hr{
+  visibility:visible;
+}
+
+.button:disabled,
+.hr{
+  visibility: hidden;
+}
+ 

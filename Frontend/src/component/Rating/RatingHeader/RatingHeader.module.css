@@ -1,0 +1,22 @@
+.ratingHeader{
+ color:white;
+background-color: #5A79B4;
+margin-left: 10px;
+margin-right: 10px;
+margin-bottom: 25px;
+border-radius: 15px;
+height: 50px;
+width: 85%;
+
+}
+.ratingHeader h1{
+    font-family: Calibri;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 106.84%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    padding-top: 10px;
+
+}

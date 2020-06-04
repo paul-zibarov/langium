@@ -1,0 +1,17 @@
+.button{
+    margin-top: 3px;
+    padding-top: 10px;
+    border: 1px solid #fff;  
+    background-image: url(./progress.png);
+    background-position: top ;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    
+    position: fixed;
+    left: 65%;
+    color: #FFB633;
+    width: 100px;
+    height: 50px;
+    outline: none;
+ }
+

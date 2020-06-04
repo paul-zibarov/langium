@@ -5,6 +5,14 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Langium.WebAPI", "Langium\Langium.WebAPI.csproj", "{FCB3DE41-41E9-424E-A212-D551D41C58EF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Langium.DataLayer", "Langium.DataLayer\Langium.DataLayer.csproj", "{81CCB665-0DCA-4D97-BF27-F16098851BDD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Langium.Test", "Langium.Test\Langium.Test.csproj", "{B1FBEC17-CAB0-46A6-9378-7D4DB153B6AC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Langium.PresentationLayer", "Langium.PresentationLayer\Langium.PresentationLayer.csproj", "{F39A93E8-4DA2-4789-A508-3FC8294865ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Langium.Domain", "Langium.Domain\Langium.Domain.csproj", "{862BCFF6-7220-487C-993B-962D1E1B5EFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{FCB3DE41-41E9-424E-A212-D551D41C58EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCB3DE41-41E9-424E-A212-D551D41C58EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCB3DE41-41E9-424E-A212-D551D41C58EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81CCB665-0DCA-4D97-BF27-F16098851BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81CCB665-0DCA-4D97-BF27-F16098851BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81CCB665-0DCA-4D97-BF27-F16098851BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81CCB665-0DCA-4D97-BF27-F16098851BDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1FBEC17-CAB0-46A6-9378-7D4DB153B6AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1FBEC17-CAB0-46A6-9378-7D4DB153B6AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1FBEC17-CAB0-46A6-9378-7D4DB153B6AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1FBEC17-CAB0-46A6-9378-7D4DB153B6AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F39A93E8-4DA2-4789-A508-3FC8294865ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F39A93E8-4DA2-4789-A508-3FC8294865ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F39A93E8-4DA2-4789-A508-3FC8294865ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F39A93E8-4DA2-4789-A508-3FC8294865ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{862BCFF6-7220-487C-993B-962D1E1B5EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{862BCFF6-7220-487C-993B-962D1E1B5EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{862BCFF6-7220-487C-993B-962D1E1B5EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{862BCFF6-7220-487C-993B-962D1E1B5EFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
