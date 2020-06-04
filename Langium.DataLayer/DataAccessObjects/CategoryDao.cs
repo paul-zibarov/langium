@@ -25,7 +25,7 @@ namespace Langium.DataLayer.DataAccessObjects
                     .Include(c => c.Words)
                         .ThenInclude(w => w.Transcription)
                     .Include(c => c.Words)
-                        .ThenInclude(w => w.Translations)
+                        .ThenInclude(w => w.Translation)
                     .FirstOrDefaultAsync(c => c.Id == id);
 
                     if (category == null)
@@ -54,7 +54,7 @@ namespace Langium.DataLayer.DataAccessObjects
                     .Include(c => c.Words)
                         .ThenInclude(w => w.Transcription)
                     .Include(c => c.Words)
-                        .ThenInclude(w => w.Translations)
+                        .ThenInclude(w => w.Translation)
                     .Where(c => c.ProfileId == profileId)
                     .ToListAsync();
 
