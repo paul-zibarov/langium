@@ -98,7 +98,7 @@ namespace Langium.Controllers
             }
         }
 
-        // PUT api/user/5
+        // PUT api/user/{id}
         [HttpPut("{id}/edit")]
         public async Task<ActionResult<UserModel>> Put(int id, UserUpdateDto userData)
         {
@@ -134,7 +134,7 @@ namespace Langium.Controllers
             return NotFound(new DataResult<UserModel>(null, "USER_NOT_EXISTS"));
         }
 
-        // DELETE api/users/5/delete
+        // DELETE api/users/{id}/delete
         [HttpDelete("{id}/delete")]
         public async Task<ActionResult<bool>> Delete(int id)
         {
