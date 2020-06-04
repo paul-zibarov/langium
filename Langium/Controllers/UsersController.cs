@@ -60,11 +60,11 @@ namespace Langium.Controllers
 
         // POST api/users/register
         [HttpPost("register")]
-        public async Task<ActionResult<UserModel>> Post(UserAuthDto user)
+        public async Task<ActionResult<UserModel>> Register(UserAuthDto regData)
         {
-            if(CheckHelper.IsValidEmail(user.Email))
+            if(CheckHelper.IsValidEmail(regData.Email))
             {
-                var added = await _dao.AddUserAsync(user);
+                var added = await _dao.AddUserAsync(regData);
 
                 if (added.Data != null)
                 {
@@ -80,6 +80,22 @@ namespace Langium.Controllers
                 return BadRequest(new DataResult<UserModel>(null, "INVALID_EMAIL"));
             }
             
+        }
+
+        // POST api/user/auth   
+        [HttpPost("auth")]
+        public async Task<ActionResult<UserModel>> Auth(UserAuthDto authData)
+        {
+            var user = _dao.GetAllUsersAsync().Result.Data.Where(u => u.Email == authData.Email && u.Password == authData.Password).ToList();
+
+            if (user.Count() == 1)
+            {
+                return Ok(user);
+            }
+            else
+            {
+                return BadRequest(new DataResult<UserModel>(null, "WRONG_EMAIL_OR_PASSWORD"));
+            }
         }
 
         // PUT api/user/5
