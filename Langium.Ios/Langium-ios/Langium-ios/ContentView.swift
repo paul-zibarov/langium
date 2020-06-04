@@ -10,11 +10,31 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+      /*TabView {
+          Text("The First Tab")
+              .tabItem {
+                  Image("Search_icon")
+              }
+          Text("Another Tab")
+              .tabItem {
+                  Image("Dictionary_icon")
+              }
+          Text("The Last Tab")
+              .tabItem {
+                  Image("Training_icon")
+              }
+          Text("Another")
+            .tabItem {
+                Image("Profile_icon")
+            }
+      }
+      .font(.headline)*/
+        Text("")
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    @State private var selection = 0
     static var previews: some View {
         ContentView()
     }
