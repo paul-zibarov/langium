@@ -74,6 +74,12 @@ namespace Langium.DataLayer.DataAccessObjects
                         {
                             Stats = new StatsModel(),
                             Categories = new List<CategoryModel>()
+                            {
+                                new CategoryModel()
+                                {
+                                    Name = "Unsorted Words"
+                                }
+                            }
                         }
                     };
 
