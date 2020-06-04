@@ -70,7 +70,7 @@ namespace Langium.DataLayer
         {
             builder.HasOne(w => w.Lexeme).WithOne(l => l.Word).HasForeignKey<LexemeModel>(l => l.WordId); //fk Lexeme
             builder.HasOne(w => w.Transcription).WithOne(t => t.Word).HasForeignKey<TranscriptionModel>(t => t.WordId); //fk Transcription
-            builder.HasMany(w => w.Translations).WithOne(t => t.Word).HasForeignKey(t => t.WordId); //fk Translations
+            builder.HasOne(w => w.Translation).WithOne(t => t.Word).HasForeignKey<TranslationModel>(t => t.WordId); //fk Translation
         }
 
         private void CategoryConfigure(EntityTypeBuilder<CategoryModel> builder)
