@@ -13,6 +13,8 @@
 		FA8201822482CB3E008DD542 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8201812482CB3E008DD542 /* Assets.xcassets */; };
 		FA8201852482CB3E008DD542 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8201842482CB3E008DD542 /* Preview Assets.xcassets */; };
 		FA8201882482CB3E008DD542 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8201862482CB3E008DD542 /* LaunchScreen.storyboard */; };
+		FAA47B0B24898493007E442A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA47B0A24898493007E442A /* Default-568h@2x.png */; };
+		FAD413AA248965E900BEB7F4 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD413A9248965E900BEB7F4 /* LoginPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FA8201842482CB3E008DD542 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA8201872482CB3E008DD542 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA8201892482CB3E008DD542 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA47B0A24898493007E442A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FAD413A9248965E900BEB7F4 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		FA82016F2482CB39008DD542 = {
 			isa = PBXGroup;
 			children = (
+				FAA47B0A24898493007E442A /* Default-568h@2x.png */,
 				FA82017A2482CB39008DD542 /* Langium-ios */,
 				FA8201792482CB39008DD542 /* Products */,
 			);
@@ -59,6 +64,7 @@
 				FA82017B2482CB39008DD542 /* AppDelegate.swift */,
 				FA82017D2482CB39008DD542 /* SceneDelegate.swift */,
 				FA82017F2482CB39008DD542 /* ContentView.swift */,
+				FAD413A9248965E900BEB7F4 /* LoginPage.swift */,
 				FA8201812482CB3E008DD542 /* Assets.xcassets */,
 				FA8201862482CB3E008DD542 /* LaunchScreen.storyboard */,
 				FA8201892482CB3E008DD542 /* Info.plist */,
@@ -110,7 +116,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FA8201732482CB39008DD542 /* Build configuration list for PBXProject "Langium-ios" */;
+			buildConfigurationList = FA8201732482CB39008DD542 /* Build configuration list for PBXProject "Langium-ios copy" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -134,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8201882482CB3E008DD542 /* LaunchScreen.storyboard in Resources */,
+				FAA47B0B24898493007E442A /* Default-568h@2x.png in Resources */,
 				FA8201852482CB3E008DD542 /* Preview Assets.xcassets in Resources */,
 				FA8201822482CB3E008DD542 /* Assets.xcassets in Resources */,
 			);
@@ -146,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD413AA248965E900BEB7F4 /* LoginPage.swift in Sources */,
 				FA82017C2482CB39008DD542 /* AppDelegate.swift in Sources */,
 				FA82017E2482CB39008DD542 /* SceneDelegate.swift in Sources */,
 				FA8201802482CB39008DD542 /* ContentView.swift in Sources */,
@@ -323,7 +331,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA8201732482CB39008DD542 /* Build configuration list for PBXProject "Langium-ios" */ = {
+		FA8201732482CB39008DD542 /* Build configuration list for PBXProject "Langium-ios copy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA82018A2482CB3E008DD542 /* Debug */,
