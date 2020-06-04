@@ -59,7 +59,7 @@ namespace Langium.WebAPI
 
         // POST api/categories/add
         [HttpPost("add")]
-        public async Task<ActionResult<UserModel>> Post(CategoryAddDto category)
+        public async Task<ActionResult<CategoryModel>> Post(CategoryAddDto category)
         {
             var result = await _dao.AddCategoryAsync(category);
 
@@ -73,8 +73,9 @@ namespace Langium.WebAPI
             }
         }
 
+        // PUT api/categories/{id}/edit
         [HttpPut("{id}/edit")]
-        public async Task<ActionResult<UserModel>> Put(int id, CategoryUpdateDto categoryData)
+        public async Task<ActionResult<CategoryModel>> Put(int id, CategoryUpdateDto categoryData)
         {
             var category = _dao.GetCategoryByIdAsync(id).Result.Data;
 
@@ -99,7 +100,7 @@ namespace Langium.WebAPI
             return NotFound(new DataResult<CategoryModel>(null, "CATEGORY_NOT_EXISTS"));
         }
 
-        // DELETE api/users/5/delete
+        // DELETE api/categories/{id}/delete
         [HttpDelete("{id}/delete")]
         public async Task<ActionResult<bool>> Delete(int id)
         {

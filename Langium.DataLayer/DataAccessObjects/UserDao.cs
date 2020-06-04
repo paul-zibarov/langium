@@ -47,7 +47,6 @@ namespace Langium.DataLayer.DataAccessObjects
                 {
                     var users = await context.Users
                     .Include(u => u.Profile)
-                        .ThenInclude(p => p.Categories)
                     .ToListAsync();
 
                     return new DataResult<IEnumerable<UserModel>> (users);
